@@ -4,14 +4,20 @@
                 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">  
         </head>
         <body>
-          <h1>music</h1> 
-          <p>it is fun</p> 
-          <ul>
-                {% for song in music%}
-                <li> {{music}} </li>
-                {% endfor %}
-            </ul>
-
+            {%if no_music == True%}   
+                 <h1>music</h1> 
+                <p>it is fun</p> 
+                <ul>
+                    {% for song in music%}
+                     <li> {{song}} </li>
+                        {% endfor %}
+                 </ul>
+            {%else%}
+                <h1>music</h1> 
+                <p>it is fun</p> 
+            {%endif%}
+            <img scr=".pink_floyd.jpg">
+        
 
         </body>
 
